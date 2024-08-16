@@ -1,5 +1,6 @@
 body{
     background-color: lightblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .navbar ul{
     list-style-type: none;
@@ -8,68 +9,94 @@ body{
     margin: 0px;
     text-align: right;
     overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .navbar a{
     color: white;
     text-decoration: none;
     padding: 15px;
     display: block;
-    
     text-transform: uppercase;
     font-weight: bold;
     
 }
 .navbar:hover{
-    background-color: #011627;
+    box-shadow: 0 -5px 0px #ddd inset;
 }
-.navbar li{
-    float: left;
+.hamburger{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+@media (max-width: 480px){
+    .hamburger {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    display: block;
+    cursor: pointer;
+    }
 }
 .div1 {
     background-color: #194568 ;
-    margin-top: -25px;
+    margin-top: -55px;
+    margin-left:-10px;
+    margin-right: -10px;
 }
 .img1{
-    width: 400px;
-    height: 350px;
-    position: relative;
-    margin-left: 470px;
-    margin-top: -20px;
+    margin-left: 50px;
 }
-.heading {
-    text-align: center; 
-    color: white;
+.heading { 
+    color: rgb(253, 252, 252);
+    margin-top: -20px;
+    margin-left: 0cqmax;
 }
 .intro {
     color: white;
     position: absolute;
-    top: 300px;
+    top: 370px;
     left: 50px;
 }
-.img2 {
-    width: 400px; 
-    height: 500px; 
-    float: left;
-    margin-left: 80px;
-    margin-top: 150px;
+@media(min-width:480px) {
+    .intro{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        flex-wrap: wrap;
+    }
 }
+.img2 {
+    max-width: 100%; 
+    height: auto; 
+    float: left;
+    margin-left: 50px;
+    margin-top: 150px;
+}   
 .div3 {
-    margin-top: 150px; 
+    margin-top: 50px; 
     color: rgb(4, 74, 77);
+    letter-spacing: 0.5px;
+    border-bottom: inset;  
+}
+@media (min-width: 480px) {
+    .div3 {
+    align-items: center;
     display: flex;
+    text-align: center;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    letter-spacing: 0.5px;
-    border-bottom: inset;
+    }
 }
 .aboutme {
     border-bottom: ridge;
     border-color: #194568
 }
 .button{
-    margin-left: 80px; 
     margin-top: 30px;
     background: rgb(4, 74, 77);
     width: 160px;
@@ -79,11 +106,22 @@ body{
     color: white;
     border-radius: 20px;
     cursor: pointer;
+    border: none;
+}
+@media(min-width: 480px) {
+    .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
 }
 .container{
     color: rgb(4, 74, 77);
     width: 90%;
     margin-top: 200px;
+    
 }
 .section-heading{
     font-size: 40px;
@@ -95,6 +133,12 @@ body{
     justify-content: center;
     align-content: center;
     margin-top: 50px;
+    flex-wrap: wrap;
+}
+@media (max-width: 480px) {
+    .services-cards{
+    flex: 1 0 100%;
+    }
 }
 .services-card{
     width: 350px;
@@ -104,6 +148,12 @@ body{
     text-align: center;
     cursor: pointer;
     letter-spacing: 0.5px;
+}
+@media(max-width: 480px) {
+    .services-card{
+    float: none;
+    width: 100%;
+    }
 }
 .email-container{
     display: flex;
@@ -126,4 +176,9 @@ body{
     margin-top: -250px;
     margin-left: -800px;
     float: left;
+}
+@media (min-width:480px) {
+    .testimonial{
+        text-align: center;
+    }
 }
